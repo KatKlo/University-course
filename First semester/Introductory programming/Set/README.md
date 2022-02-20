@@ -1,4 +1,4 @@
-# First project assigment - Simulation of game SET
+# Assigment project 1 - Simulation of game SET
 
 ## Full description of the task in polish:
 
