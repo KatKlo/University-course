@@ -1,8 +1,8 @@
 # First project assigment - Simulation of game SET
 
-##Full description of the task in polish:
+## Full description of the task in polish:
 
-###Wprowadzenie
+### Wprowadzenie
 SET (po angielsku zbiór, zestaw) jest grą karcianą dla dowolnej liczby graczy. Jest to gra czasu rzeczywistego - nie określa kolejności zagrań.
 
 W SET gra się specjalnymi kartami, które mają po cztery atrybuty przyjmujące jedną z trzech wartości:
@@ -31,12 +31,12 @@ Gra w SET polega na wyszukiwaniu na stole trójek kart tworzących set. Gracz, k
 
 Gdy wszyscy gracze stwierdzą, że nie widzą seta, z talii wykłada się trzy dodatkowe karty. Czasem może więc być ich na stole 15 a nawet więcej. Jeśli gracze nie widzą seta a talia jest już pusta, gra kończy się. Wynikiem każdego gracza jest liczba zdobytych przez niego setów.
 
-###Polecenie
+### Polecenie
 Napisz program symulujący końcówkę gry w SET. Przyjmij, że gracze zawsze wybierają "pierwszy" spośród setów leżących na stole, tzn. taki, przed którym nie ma żadnego innego. Uznajemy, że set złożony z kart na pozycjach x < y < z jest przed setem na pozycjach x' < y' < z', jeśli:
 
 (x < x') lub (x = x' i y < y') lub (x = x' i y = y' i z < z').
 
-###Postać danych
+### Postać danych
 Dane programu to ciąg liczb całkowitych z przedziału od 1111 do 3333, bez powtórzeń. Długość ciągu jest podzielna przez 3. Liczby są zapisane dziesiętnie cyframi ze zbioru {'1', '2', '3'}.
 
 Dane są dowolnie sformatowane za pomocą spacji i podziału na wiersze.
@@ -69,7 +69,7 @@ Liczba zapisana dziesiętnie jako ABCD reprezentuje kartę o atrybutach:
 
 - owal - gdy D to 3.
 
-###Postać wyniku
+### Postać wyniku
 Program pisze na wyjście początkowy stan stołu, zapis ciągu zagrań, aż do końca rozgrywki i stan stołu po każdym zagraniu. Zagraniem jest usunięcie setu i ewentualne uzupełnienie stołu do 12 kart lub dodanie 3 kart z talii, jeśli na stole nie było setu.
 
 Zapis stanu stołu jest wierszem zaczynającym się od znaku '='. Po nim wypisujemy karty, w kolejności, jaką mają na stole.
@@ -80,7 +80,7 @@ Pobranie dodatkowych kart, gdy na stole nie było setu, jest reprezentowane prze
 
 Wypisując ciąg kart na stole lub w secie, reprezentujemy je tak samo, jak w danych wejściowych. Każdą kartę poprzedzamy dokładnie jedną spacją.
 
-###Przykłady
+### Przykłady
 Do treści zadania dołączone są pliki .in z przykładowymi danymi i pliki .out z wynikami wzorcowymi.
 
 - Dla danych przyklad1.in poprawny wynik to przyklad1.out .
