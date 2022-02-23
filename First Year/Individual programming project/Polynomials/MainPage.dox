@@ -1,0 +1,61 @@
+/**
+@mainpage Dokumentacja zadania wielomiany
+
+## Treść zadania
+
+Uwaga: aktualna treść zadania znajduje się w [Moodle](https://moodle.mimuw.edu.pl).
+
+## Opis programu
+
+Tegoroczne duże zadanie polega na zaimplementowaniu operacji na wielomianach
+rzadkich wielu zmiennych.
+
+### O wielomianach rzadkich wielu zmiennych
+
+Definicja wielomianu jest rekurencyjna. Wielomian zmiennej @f$x_i@f$ to suma jednomianów postaci @f$p_{i+1} * x_i^n@f$ gdzie n jest wykładnikiem tego jednomianu będącym nieujemną liczbą całkowitą, a @f$p_{i+1}@f$ jest współczynnikiem, który jest wielomianem zmiennej @f$x_{x+1}@f$.
+Rekurencja kończy się, gdy współczynnik jest liczbą, a nie sumą kolejnych jednomianów.
+
+### Sposób implementacji wielomianu
+
+Wielomian jest przechowywany jako typ strukturalny "Poly".
+- Jeżeli wielomian jest stały (liczbą), to zawiera pusty wskaźnik oraz swoją wartość.
+- Jeżeli wielomian jest sumą jednomianów, to zawiera liczbę składowych jednomianów oraz wskaźnik na tablicę typu strukturalnego "Mono" je zawierającą. Tablica ta jest zawsze posortowana rosnąco według wykładników kolejnych jednomianów.
+
+### Funkcjonalność calc.c
+
+Jest to kalkulator operujący na wielomianach rzadkich wielu zmiennych. Wczytuje on kolejne wiersze z wejścia i wykonuje kolejne czynności w nich zapisane. W jednym wierszu może znajdować się wielomian lub polecenie do wykonania. Jeżeli wczytany zostanie poprawny wielomian, to jest on zapisywany w pamięci kalkulatora. Jeżeli zostanie wczytane poprawne polecenie, to zostanie ono wykonane i zostanie wypisany ewentualny jej wynik. Jeżeli wczytana linia będzie błędna, to zostanie wypisany stosowny komunikat.
+
+### Najważniejsze funkcjonalności interfejsu biblioteki poly.h
+
+Zaimplementowany interfejs klasy wielomianów rzadkich wielu zmiennych wraz z biblioteką operacji pozwala między innymi na:
+- Stworzenie wielomianu na podstawie tablicy jednomianów (w różnych konfiguracjach własności tablicy);
+- Dodawanie, odejmowanie, mnożenie i dzielenie dwóch wielomianów;
+- Sprawdzenie, czy dwa wielomiany są sobie równe;
+- Wyznaczenie stopnia wielomianu ze względu na zmienną lub nie;
+- Wyliczenie wartości wielomianu dla danego punktu;
+- Dokonanie operacji składania wielomianów.
+
+### Najważniejsze funkcjonalności interfejsu biblioteki stack.h
+
+Zaimplementowany interfejs pozwala na stworzenie i wykonywanie operacji na stosie wielomianów. Tymi operacjami są:
+- Dodanie nowego wielomianu na stos;
+- Usunięcie wielomianu z czubka stosu;
+- Uzyskanie wielomianu z danej pozycji od czubka stosu (nie na własność!);
+- Zwolnienie całego stosu.
+
+### Najważniejsze funkcjonalności interfejsu biblioteki maker.h
+
+Zaimplementowany interfejs pozwala na:
+- Wczytanie wielomianu z linii i zapisanie go na stosie wielomianów;
+- Wczytanie polecenia i wykonanie go na stosie w miarę możliwości.
+
+W razie błędu wykonania/wczytania wypisywany jest stosowny komunikat.
+
+### Najważniejsze funkcjonalności interfejsu biblioteki parser.h
+
+Zaimplementowany interfejs pozwala na:
+- Wczytanie wielomianu z linii;
+- Wczytanie polecenia z linii.
+
+
+*/
